@@ -36,8 +36,9 @@ const Login: React.FC = () => {
       const result = response.data;
 
       if (response.status === 200) {
+        const result = response.data;
         //성공
-        console.log('로그인 성공, 로그인 유저:', result.id);
+        console.log('로그인 성공, 로그인 유저:', result);
         setLoginCheck(null);
         navigate('/'); //홈페이지로 이동
       } else if (response.status === 400) {
@@ -187,5 +188,3 @@ const Login: React.FC = () => {
 };
 
 export default Login;
-
-//api/v1/users/login
